@@ -1,0 +1,17 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+
+    <!--
+    The ehcache-failsafe.xml is a default configuration for ehcache, if an ehcache.xml is not configured.
+    -->
+    <diskStore path="F:/recordlesson/temp"/>
+    <!-- 这句话的意思是一次只能操作十个对象 -->
+    <defaultCache
+            maxElementsInMemory="10"
+            eternal="true"
+            overflowToDisk="true"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            />
+  
+</ehcache>

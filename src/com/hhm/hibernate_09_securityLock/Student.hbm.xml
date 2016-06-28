@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hhm.hibernate_09_securityLock.Student" table="hibernate_09_securityLock_Student">
+		<id name="id" >
+			<generator class="increment"></generator>
+		</id>
+		<version name="version"></version>		
+		<property name="name" ></property>
+		<property name="birth" ></property>
+		<property name="gender" ></property>
+		<property name="department" ></property>
+		<property name="major" ></property>
+		<property name="mobile" ></property>
+		<property name="province" ></property>
+	</class>
+</hibernate-mapping>

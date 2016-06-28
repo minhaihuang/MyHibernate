@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hhm.hibernate_07_queryMethod.Department" table="hibernate_07_queryMethod_Department" lazy="true">
+		<id name="did" >
+			<generator class="increment"></generator>
+		</id>		
+		<property name="name" ></property>
+		<property name="brief" ></property>
+		
+		<set name="employees" inverse="true" cascade="all">
+            <key column="did"/>
+            <one-to-many  class="com.hhm.hibernate_07_queryMethod.Employee"/>
+        </set>
+	</class>
+</hibernate-mapping>

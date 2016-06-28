@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hhm.hibernate_07_queryMethod.Employee" table="hibernate_07_queryMethod_Employee">
+		<id name="eid" >
+			<generator class="increment"></generator>
+		</id>		
+		<property name="name" ></property>
+		<property name="salary" ></property>
+		
+		<many-to-one name="department" column="did"
+                     class="com.hhm.hibernate_07_queryMethod.Department"/>	
+	</class>
+	
+	<query name="findEmployeeByDname">
+		  <![CDATA[  from Employee e where e.name like ? ]]>
+	</query>
+</hibernate-mapping>

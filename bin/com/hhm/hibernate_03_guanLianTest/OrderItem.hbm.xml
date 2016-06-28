@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hhm.hibernate_03_guanLianTest.OrderItem" table="OrderItem">
+		<id name="orderItemId" >
+			<generator class="increment"></generator>
+		</id>		
+		<property name="productName" ></property>
+		<property name="price" ></property>
+		<property name="quantity" ></property>
+		
+		<many-to-one name="order" column="orderId"
+                     class="com.hhm.hibernate_03_guanLianTest.Order"/>	
+	</class>
+</hibernate-mapping>

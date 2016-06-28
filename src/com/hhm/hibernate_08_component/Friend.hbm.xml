@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hhm.hibernate_08_component.Friend" table="hibernate_08_component_Friend" lazy="true">
+		<id name="id" >
+			<generator class="increment"></generator>
+		</id>		
+		<property name="name" ></property>
+		
+		<component name="address" class="com.hhm.hibernate_08_component.Address">
+			<parent name="friend"/>
+			<property name="province"></property>
+			<property name="city"></property>
+		</component>
+	</class>
+</hibernate-mapping>
